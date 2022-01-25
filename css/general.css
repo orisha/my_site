@@ -1,0 +1,46 @@
+body{
+
+    background-color: #171717;
+    color: #44e936;
+    font-family: Andale Mono, AndaleMono, monospace;
+    font-size: 1.2em ;
+    overflow: hidden;
+
+}
+
+
+a:link {
+    color: #44e936;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #44e936 !important;
+    text-decoration: none;
+
+}
+
+
+
+.blinkin {
+    animation: blinker 0.7s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.ByThree {
+
+    width: 93%;
+}
+
+.ByThree div {
+    width: 29%;
+    display: inline-flex;
+}

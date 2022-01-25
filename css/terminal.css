@@ -1,0 +1,59 @@
+.Terminal{
+
+    width: 91.5%;
+    height: 83.5%;
+    max-height: 83.5%;
+    border: solid 3px silver;
+    margin: 1%;
+    padding: 3%;
+    /*max-height: 90%;
+    height: 90% !important;*/
+    overflow: auto;
+    position: absolute;
+
+}
+
+.Terminal span{
+    margin: 0;
+}
+
+.IptTerminal{
+
+    background-color: #171717;
+    color: #44e936;
+    font-size: 1em;
+
+    font-family: Andale Mono, AndaleMono, monospace;
+    width: 97%;
+    border: solid 1px #171717 !important;
+
+    border-radius: 0 !important;
+    -webkit-appearance: none !important;
+    outline: none !important;
+    /*margin-top: 20px ;*/
+}
+
+
+.clickMe:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.helpFixed {
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 2%;
+}
+
+.Powered {
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 2%;
+    font-size: 12px !important;
+}

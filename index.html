@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> >> Diego Favero << >> Full Stack Developer << </title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/terminal.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css" />
+
+    <script type="text/javascript">
+
+        var time = 100;
+        var timeInc = 50;
+
+        var  setTimeout_ScrollBottom;
+
+        var ComandList = [ 'programming', 'skills',  'project', 'resume', 'about', 'contact', 'home', 'menu', 'help', 'clear']
+        var Languages = ['php', 'kotlin', 'javascript', 'golang']
+        var LanguagesCodes = ['phpcode', 'javascriptcode', 'golangcode', 'kotlincode']
+
+
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js "></script>
+    <script type="text/javascript"  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript"  src="js/CLI.js"></script>
+    <script type="text/javascript"  src="js/commands.js"></script>
+
+</head>
+<body>
+
+
+    <div id="Terminal" class="Terminal" >
+
+        <div class="Powered"> Powered by JavaScript, jQuery, HTML and CSS </div>
+
+        <div class="top">
+
+            <pre>
+
+            888888ba  oo                                88888888b
+            88    `8b                                   88
+            88     88 dP .d8888b. .d8888b. .d8888b.     88aaaa    .d8888b. dP   .dP .d8888b. 88d888b. .d8888b.
+            88     88 88 88ooood8 88'  `88 88'  `88     88        88'  `88 88   d8' 88ooood8 88'  `88 88'  `88
+            88    .8P 88 88.  ... 88.  .88 88.  .88     88        88.  .88 88 .88'  88.  ... 88       88.  .88
+            8888888P  dP `88888P' `8888P88 `88888P'     dP        `88888P8 8888P'   `88888P' dP       `88888P'
+                                       .88
+                                    d8888P
+            </pre>
+
+            <pre style="font-size: 0.61em">
+
+                .8888b          dP dP            dP                     dP                dP                            dP
+                88   "          88 88            88                     88                88                            88
+                88aaa  dP    dP 88 88 .d8888b. d8888P .d8888b. .d8888b. 88  .dP     .d888b88 .d8888b. dP   .dP .d8888b. 88 .d8888b. 88d888b. .d8888b. 88d888b.
+                88     88    88 88 88 Y8ooooo.   88   88'  `88 88'  `"" 88888"      88'  `88 88ooood8 88   d8' 88ooood8 88 88'  `88 88'  `88 88ooood8 88'  `88
+                88     88.  .88 88 88       88   88   88.  .88 88.  ... 88  `8b.    88.  .88 88.  ... 88 .88'  88.  ... 88 88.  .88 88.  .88 88.  ... 88
+                dP     `88888P' dP dP `88888P'   dP   `88888P8 `88888P' dP   `YP    `88888P8 `88888P' 8888P'   `88888P' dP `88888P' 88Y888P' `88888P' dP
+                                                                                                                                    88
+                                                                                                                                    dP
+            </pre>
+        </div>
+        <span class="MainTerminal"></span>
+        <span class="cursorCLI blinkin" >|</span>
+
+        <div class="helpFixed"> type <span class="clickMe" onclick="RunCommand('help')">help</span> </div>
+
+
+    </div>
+    <div id="resumeModal" style="display: none">
+
+        <iframe style="border: none" width="100%" height="100%"></iframe>
+
+    </div>
+
+    <div id="PHP" style="display: none">
+
+        <div> #OldButGood </div>
+        <div> Level : Expert </div>
+        <div> First contact in 1999 </div>
+        <div> Preferred Framework : Symfony   </div>
+        <div> Preferred IDE : PHPStorm </div>
+        <div> My first contact with PHP was back in the past millennium when I was an intern at university's IT Lab </div>
+        <div> Since then, it has been used as base for most of the job's I have done so far</div>
+        <div class="clickMe" onclick="RunCommand('phpcode')"> Click me to check a piece of code or type phpcode </div>
+
+    </div>
+
+    <div id="JavaScript" style="display: none">
+
+        <div> #LifeSaver </div>
+        <div> Level : Expert </div>
+        <div> Preferred Framework : Jquery   </div>
+        <div> Javascript has proven its value as a powerful tool to manipulate client-side programming.  </div>
+        <div> Perfect to filter and validate data before send it to server.  </div>
+        <div> Fast and Light. </div>
+        <div class="clickMe" onclick="RunCommand('javascriptcode')"> Click me to check a piece of code or type javascriptcode </div>
+
+    </div>
+
+
+    <div id="GoLang" style="display: none">
+
+        <div> #FasterAndReliable </div>
+        <div> Level : Getting Expert </div>
+        <div> Preferred IDE : GoLand   </div>
+        <div> Go Lang is lots faster and reliable than many other languages. </div>
+        <div> Perfect to handle the heavy job.  </div>
+        <div> It is my new love  . </div>
+        <div class="clickMe" onclick="RunCommand('golangcode')"> Click me to check a piece of code or type golangcode </div>
+
+    </div>
+
+    <div id="Kotlin" style="display: none">
+
+        <div> #ModernAndEfficient </div>
+        <div> Level : Getting Expert </div>
+        <div> Preferred IDE : Android Studio   </div>
+        <div> Kotlin is an modern and necessary language.</div>
+        <div> Perfect to build android's apps with less boiling plate than Java.  </div>
+        <div class="clickMe" onclick="RunCommand('kotlincode')"> Click me to check a piece of code or type kotlincode </div>
+
+    </div>
+
+    <div id="Contact" style="display: none">
+
+
+        <div> Email : <a href="mailto:diego.g.favero@gmail.com">diego.g.favero@gmail.com</a> </div>
+        <div> Skype : diego.g.favero </div>
+        <div> Phone : +55 75 998123412 </div>
+        <div>  Portifolio : <a href="http://18.216.194.20/diegofavero.dev" target="_blank">http://18.216.194.20/diegofavero.dev</a> </div>
+        <div>  StackOverflow : <a href="https://stackoverflow.com/users/688689/diego-favero" target="_blank">https://stackoverflow.com/users/688689/diego-favero </a> </div>
+        <div>  Linkedin : <a href="https://www.linkedin.com/in/faverodiego/" target="_blank">https://www.linkedin.com/in/faverodiego/</a> </div>
+        <div>  GitHub : <a href="https://github.com/orisha" target="_blank"> https://github.com/orisha</a> </div>
+
+    </div>
+
+    <div id="ForkIt" style="display: none">
+        <div>  Fork It at GitHub : <a href="https://github.com/orisha/SampleCodesPHPJavaScriptGoLang" target="_blank"> https://github.com/orisha/SampleCodesPHPJavaScriptGoLang </a> </div>
+    </div>
+
+    <div id="About" style="display: none">
+
+
+        <div> I have been using PHP and its 'sidekicks' for web development since 1999 when I started to be an intern in the university's computer's lab. </div>
+        <div> Today I am able to work in any stage from a system development: </div>
+        <div> Since analyze system requirements, going thru server setup, database design and administration, team managing, coding ( Structure, Backend and Frontend), test and deployment ! </div>
+        <div> Currently, I have based my projects on microservice architecture. Using GoLang as BackEnd </div>
+        <div> I am really up to start to learn new technologies. </div>
+        <div> <br / > </div>
+        <div class="clickMe" onclick="openPdf('public/FullStack_WebDeveloper_Diego_Favero_resume.pdf');" > Please, take a look on my  Resume clicking here </div>
+        <div class="clickMe" onclick="openPdf('public/Cover-Letter-Diego-Favero-FullStack-Developer.pdf');"> Please, take a look on my  Cover Letter clicking here</div>
+        </div>
+
+    </div>
+
+    <div id="Help" style="display: none">
+
+
+        <div> Please, type or click one of the follow commands: </div>
+        <div> <br /> </div>
+
+    </div>
+
+    <div id="Skills" style="display: none">
+
+
+        <div class="ByThree">
+            <div> <span class="clickMe" onclick="RunCommand('php')">#PHP</span>  </div>
+            <div> #MySQL </div>
+            <div> <span class="clickMe" onclick="RunCommand('golang')">#GoLang</span> </div>
+        </div>
+
+        <div class="ByThree">
+            <div> #UI UX </div>
+            <div> #Linux </div>
+            <div> <span class="clickMe" onclick="RunCommand('javascript')">#JavaScript</span> </div>
+        </div>
+
+        <div class="ByThree">
+            <div> #Symfony </div>
+            <div> <span class="clickMe" onclick="RunCommand('kotlin')">#Kotlin</span> </div>
+            <div> #Docker </div>
+        </div>
+        <div> <br / > </div>
+        <div class="clickMe" onclick="openPdf('public/FullStack_WebDeveloper_Diego_Favero_resume.pdf');" > Please, take a look on my  Resume clicking here </div>
+
+    </div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+    openPdf = function ( path ){
+
+        var dlg = $("#resumeModal"); // Get the dialog container.
+
+        var width = $(document).width();
+        var height = $(window).height();
+
+
+        // width = width - 50;
+        height = height - 50; // iframe height will need to be even less to account for space taken up by dialog title bar, buttons, etc.
+
+
+        $(dlg.children("iframe").get(0)).css("height", height + "px");
+        $(dlg.children("iframe").get(0)).attr( 'src', path)
+
+        dlg.dialog({
+            title: 'press ESC to close',
+            modal: true,
+            height: "auto", // Set the height to auto so that it grows along with the iframe.
+            width: width,
+            resizable: true,
+            close: function () {
+
+                $(".CLIType").last().focus()
+                dlg.dialog('destroy')
+            }
+            ,open: function( event, ui ) {
+
+
+            }
+
+
+        });
+
+        // setTimeout( EnableCliForType, 100);
+    }
+
+
+
+
+    ChangeCursor = function(){
+
+        $('.cursorCLI').hide()
+
+        $(".CLIType").last().focus()
+    }
+
+    CancelScrollBottom = function(time){
+
+        try{
+            clearTimeout(setTimeout_ScrollBottom)
+
+        }
+        catch(e){}
+
+        if ( time ){
+            setTimeout_ScrollBottom = setTimeout( ScrollBottom, time)
+        }
+
+        return true;
+    }
+
+
+     ScrollBottom = function(  ){
+
+        // console.log(Math.random());
+
+        CancelScrollBottom()
+
+
+        var posy =  $("#Terminal").height() +  ( $("#Terminal").scrollTop()  * 10 );
+
+         $("#Terminal").animate({ scrollTop: posy  });
+
+         CancelScrollBottom()
+
+         return true
+
+     }
+
+    FillCommandsHelper = function () {
+
+    // <div class="clickMe" onclick="RunCommand('programming')">programming</div>
+
+        var prnt = $("#Help");
+        $(ComandList).each(function () {
+
+            // console.log($(this))
+
+            let __div = $("<div />")
+            __div.addClass("clickMe")
+            __div.attr( "onclick", "RunCommand($(this).html())" )
+            __div.append(this)
+
+            prnt.append( __div)
+        })
+
+    }
+
+    var initial;
+
+    $(document).ready(function () {
+
+        initial = $('#Terminal').html();
+
+
+        FillCommandsHelper()
+
+        setTimeout( 'StartCLI()', 500);
+
+        $('.Terminal').click(function () {
+
+            $(".CLIType").last().focus()
+
+        })
+    });
+
+    // $('#Terminal').scroll(function(e) {
+    //
+    //     // console.log($(this))
+    //     // console.log($(this).height())
+    //     //
+    //     // console.log( )
+    //     console.log($(this).scrollTop())
+    //     // console.log(e)
+    //     console.log( $(window).scrollTop())
+    // })
+
+
+</script>
